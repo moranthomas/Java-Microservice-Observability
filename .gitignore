@@ -1,0 +1,25 @@
+### Common ###
+.mvn/
+logs/
+dist/
+local/
+build/
+target/
+!**/src/main/**
+!**/src/test/**
+
+
+### IntelliJ IDEA ###
+.settings/
+.project/
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+node_modules/
+
+### macOS
+.DS_Store

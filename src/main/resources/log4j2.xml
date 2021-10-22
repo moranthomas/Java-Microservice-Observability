@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <File name="FILE" fileName="app.log">
+            <PatternLayout pattern="%d{YYY-MM-DD HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.hibernate.SQL" level="DEBUG">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <Logger name="org.hibernate.type.descriptor.sql" level="TRACE">
+            <AppenderRef ref="FILE"/>
+        </Logger>
+        <AsyncRoot level="INFO">
+            <AppenderRef ref="FILE"/>
+            <!--<AppenderRef ref="stdout" />-->
+        </AsyncRoot>
+    </Loggers>
+</Configuration>
